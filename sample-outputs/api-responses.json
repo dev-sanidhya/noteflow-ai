@@ -1,0 +1,86 @@
+{
+  "GET /api/notes": {
+    "description": "Returns array of notes for authenticated user",
+    "example": [
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "user_id": "user-uuid-here",
+        "title": "Project Planning - Q3 2025",
+        "content": "## Goals\n\n- Launch new feature by end of July\n- Improve test coverage to 80%\n- Onboard 2 new team members\n\n## Notes\n\nThe main focus this quarter should be on stability and performance improvements.",
+        "tags": ["work", "planning", "q3"],
+        "category": "Work",
+        "is_archived": false,
+        "is_public": false,
+        "share_id": null,
+        "ai_summary": null,
+        "ai_action_items": null,
+        "ai_suggested_title": null,
+        "ai_generated_at": null,
+        "ai_generation_count": 0,
+        "created_at": "2025-05-14T10:00:00Z",
+        "updated_at": "2025-05-14T10:30:00Z"
+      }
+    ]
+  },
+  "POST /api/notes": {
+    "description": "Creates a new note",
+    "request": {
+      "title": "My New Note",
+      "content": "Note content here",
+      "tags": ["tag1", "tag2"],
+      "category": "General"
+    },
+    "response": {
+      "id": "new-note-uuid",
+      "user_id": "user-uuid",
+      "title": "My New Note",
+      "content": "Note content here",
+      "tags": ["tag1", "tag2"],
+      "category": "General",
+      "is_archived": false,
+      "is_public": false,
+      "share_id": null,
+      "ai_summary": null,
+      "ai_action_items": null,
+      "ai_suggested_title": null,
+      "ai_generated_at": null,
+      "ai_generation_count": 0,
+      "created_at": "2025-05-14T12:00:00Z",
+      "updated_at": "2025-05-14T12:00:00Z"
+    }
+  },
+  "POST /api/notes/:id/share": {
+    "description": "Generates a public share link for the note",
+    "response": {
+      "share_id": "aB3xK9mP2q",
+      "share_url": "https://noteflow-ai.vercel.app/shared/aB3xK9mP2q"
+    }
+  },
+  "GET /api/insights": {
+    "description": "Returns productivity insights for the authenticated user",
+    "example": {
+      "total_notes": 24,
+      "archived_notes": 3,
+      "public_notes": 2,
+      "recently_edited": [],
+      "most_used_tags": [
+        { "tag": "work", "count": 12 },
+        { "tag": "ideas", "count": 8 },
+        { "tag": "planning", "count": 6 }
+      ],
+      "ai_usage": {
+        "total_generations": 15,
+        "notes_with_ai": 10
+      },
+      "weekly_activity": [
+        { "date": "2025-05-08", "count": 2 },
+        { "date": "2025-05-09", "count": 0 },
+        { "date": "2025-05-10", "count": 4 },
+        { "date": "2025-05-11", "count": 1 },
+        { "date": "2025-05-12", "count": 3 },
+        { "date": "2025-05-13", "count": 0 },
+        { "date": "2025-05-14", "count": 2 }
+      ]
+    }
+  }
+}

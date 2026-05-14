@@ -1,0 +1,25 @@
+{
+  "description": "Example AI summary result from POST /api/notes/:id/generate-summary",
+  "input": {
+    "title": "Weekly Team Sync - May 14",
+    "content": "## Attendees\n- Sarah (PM)\n- Alex (Engineering)\n- Maria (Design)\n\n## Discussion\n\n### Feature X Launch\nWe reviewed the current status of Feature X. Alex mentioned that the backend is 90% done but there are still some edge cases to handle around error states. Maria showed updated designs that everyone approved.\n\n### Bug Backlog\nThere are currently 12 open bugs, 3 of which are critical. The team agreed to prioritize these before the launch.\n\n### Q3 Roadmap\nSarah presented the roadmap for Q3. The main focus will be on improving performance and onboarding a new partner integration.\n\n## Action Items\n- Alex: Fix the 3 critical bugs by Thursday\n- Maria: Finalize the onboarding flow designs by EOD Friday\n- Sarah: Send updated roadmap to stakeholders\n- Everyone: Review Q3 OKRs document before next sync"
+  },
+  "output": {
+    "summary": "The weekly team sync covered the status of Feature X (90% complete with some edge cases remaining), reviewed 12 open bugs (3 critical) that need priority before launch, and discussed the Q3 roadmap focused on performance improvements and a new partner integration. Designs for Feature X were approved by the team.",
+    "action_items": [
+      "Alex: Fix the 3 critical bugs by Thursday",
+      "Maria: Finalize the onboarding flow designs by EOD Friday",
+      "Sarah: Send updated roadmap to stakeholders",
+      "Everyone: Review Q3 OKRs document before next sync"
+    ],
+    "suggested_title": "Weekly Team Sync - May 14: Feature X Update and Q3 Roadmap"
+  },
+  "model": "claude-haiku-4-5-20251001",
+  "saved_to_note": {
+    "ai_summary": "The weekly team sync covered...",
+    "ai_action_items": ["..."],
+    "ai_suggested_title": "...",
+    "ai_generated_at": "2025-05-14T15:00:00Z",
+    "ai_generation_count": 1
+  }
+}
