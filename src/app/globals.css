@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --sidebar-bg: #0f172a;
+  --accent: #7c3aed;
+  --accent-light: #8b5cf6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Prose styles for markdown content */
+.prose-note {
+  @apply text-slate-700 leading-relaxed;
+}
+
+.prose-note h1,
+.prose-note h2,
+.prose-note h3 {
+  @apply font-semibold text-slate-900 mt-6 mb-3;
+}
+
+.prose-note h1 { @apply text-2xl; }
+.prose-note h2 { @apply text-xl; }
+.prose-note h3 { @apply text-lg; }
+
+.prose-note p {
+  @apply mb-4;
+}
+
+.prose-note ul,
+.prose-note ol {
+  @apply mb-4 pl-6;
+}
+
+.prose-note li {
+  @apply mb-1;
+}
+
+.prose-note code {
+  @apply bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.prose-note pre {
+  @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.prose-note pre code {
+  @apply bg-transparent text-inherit p-0;
+}
+
+.prose-note blockquote {
+  @apply border-l-4 border-violet-300 pl-4 italic text-slate-600 my-4;
+}
+
+.prose-note a {
+  @apply text-violet-600 underline hover:text-violet-700;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
